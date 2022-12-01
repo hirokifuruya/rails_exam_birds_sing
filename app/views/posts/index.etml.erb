@@ -1,0 +1,33 @@
+<div class="container">
+<header>
+  <h1>一覧</h1>
+  <div class="bird_img">
+    <%= image_tag 'bird_png' %>
+  </div>
+</header>
+<div class="main">
+  <p class="content"><%= notice %></p>
+
+<table class="content">
+  <tr>
+    <th>内容<th>
+  </tr>
+<% @post.each do |post| %>
+  <tr>
+    <td><%= post.content %></td>
+    <td><%= link_to '確認', post_path(post.id), class: "link" %></td>
+    <td><%= link_to '編集', edit_post_path(post.id). class: "link" %></td>
+    <td><%= link_to '削除', post_path(post.id), method: :delete, data: { confirm: '本当に削除していいですか？'}, class: "link" %></td>
+  </tr>
+<% end%>
+</table>
+
+<div class="new_button">
+<%= link_to'新しく投稿する', new_post_path, class: "new_link" %>
+</div>
+
+</div>
+      <footer class="footer">
+        <p>speak_app_footer</p>
+      </footer>
+</div>
