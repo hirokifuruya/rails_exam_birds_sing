@@ -1,0 +1,24 @@
+<%= form_with(model: @post, local: true, url: choose_new_or_edit) do |form| %>
+  <% if @post.errors.any? %>
+    <div class="error_explanation">
+      <h2>>内容が空白、制限を超えてます。</h2>
+    </div>
+  <% end %>
+
+  <div class="bird_title">
+    <%= image_tag 'bird.png' %>
+  </div>
+  <div class="content">
+    <%= form.label ::投稿内容 %>
+    <%= form.text_field :content %>
+  </div>
+  <div class="send_button">
+  <%= form.submit %>
+  </div>
+
+<%= link_to "一覧画面に戻る", post_path, posts_path, class: "back_link" %>
+<% end %>
+
+<footer class="footer">
+<p>speak_app_hooter</p>
+</footer>
