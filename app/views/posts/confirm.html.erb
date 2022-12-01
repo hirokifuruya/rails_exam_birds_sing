@@ -1,0 +1,24 @@
+<header>
+<h3>以下の内容で送信する</h3>
+</header>
+
+<div class="bird_img">
+  <%= image_tag 'bird_png' %>
+</div>
+
+<%= form_with(model: @post, local: true) do |form| %>
+
+  <%= form.hidden_field :content %>
+
+  <p class="content">本文:<%= @post.content %></p>
+
+  <div class="content">本文:<%= @post.content %></p>
+  <%= form.submit "登録する" %>
+  <%= form.submit "戻る", name: 'back' %>
+  </div>
+
+<% end %>
+
+<footer class="footer">
+  <p>speak_app_hooter</p>
+</footer>
