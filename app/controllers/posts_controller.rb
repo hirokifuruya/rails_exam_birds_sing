@@ -29,7 +29,7 @@ class PostsController < ApplicationController
 
   def update
     if @post.update(post_params)
-      redirect_to blogs_path, notice: "編集完了！"
+      redirect_to posts_path, notice: "編集完了！"
     else
       render :edit
     end
@@ -37,7 +37,7 @@ class PostsController < ApplicationController
 
   def destroy
     @post.destroy
-    redirect_to post_path, notice: "削除完了！"
+    redirect_to posts_path, notice: "削除完了！"
   end
 
   def confirm

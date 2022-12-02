@@ -2,10 +2,6 @@
 <h3>以下の内容で送信する</h3>
 </header>
 
-<div class="bird_img">
-  <%= image_tag 'bird_png' %>
-</div>
-
 <%= form_with(model: @post, local: true) do |form| %>
 
   <%= form.hidden_field :content %>
@@ -18,5 +14,5 @@
 <% end %>
 
 <footer class="footer">
-  <p>speak_app_hooter</p>
+  <p>ツイートアプリケーション</p>
 </footer>
