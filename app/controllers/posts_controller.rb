@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_content, only:[:edit, :show, :update, :destroy]
   def index
-    @post = Post.all
+    @posts = Post.all
   end
 
   def new
@@ -40,6 +40,10 @@ class PostsController < ApplicationController
     redirect_to post_path, notice: "削除完了！"
   end
 
+  def confirm
+    @post = Post.new(post_params)
+    render :new if @post.invalid?
+  end
   private
 
   def post_params

@@ -6,17 +6,17 @@
   <% end %>
 
   <div class="bird_title">
-    <%= image_tag 'bird.png' %>
+    <%= image_tag 'bird_png' %>
   </div>
   <div class="content">
-    <%= form.label ::投稿内容 %>
+    <%= form.label "投稿内容" %>
     <%= form.text_field :content %>
   </div>
   <div class="send_button">
   <%= form.submit %>
   </div>
 
-<%= link_to "一覧画面に戻る", post_path, posts_path, class: "back_link" %>
+<%= link_to "一覧画面に戻る", posts_path, class: "back_link" %>
 <% end %>
 
 <footer class="footer">

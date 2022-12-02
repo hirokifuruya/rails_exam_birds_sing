@@ -9,10 +9,8 @@
 <%= form_with(model: @post, local: true) do |form| %>
 
   <%= form.hidden_field :content %>
-
-  <p class="content">本文:<%= @post.content %></p>
-
-  <div class="content">本文:<%= @post.content %></p>
+  <p>本文:<%= @post.content %></p>
+  <div class="content">
   <%= form.submit "登録する" %>
   <%= form.submit "戻る", name: 'back' %>
   </div>
